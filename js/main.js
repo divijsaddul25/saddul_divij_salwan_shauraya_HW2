@@ -6,6 +6,10 @@ class Recipe {
     this.directions = directions;
   }
 
+
+
+
+  
   
   displayRecipe() {
     return `
@@ -56,4 +60,17 @@ recipeForm.addEventListener('submit', function (e) {
 
  
   recipeForm.reset();
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#progress-bar", {
+  width: "100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 0.5
+  }
 });
