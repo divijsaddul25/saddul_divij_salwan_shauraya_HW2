@@ -1,0 +1,225 @@
+body {
+    font-family: montserrat, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('/images/bg_image.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-out;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInLogo 1s ease-out forwards;
+}
+
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.recipe-list .container {
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background-color: #b9a363;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInRecipe 0.8s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card h3 {
+    color: #b9a363 ;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+.add-recipe {
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #b9a363;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+form button:hover {
+    background-color: #000000;
+}
+
+textarea#recipe-directions {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #b9a363;
+    border-radius: 5px;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRecipe {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .recipe-card {
+        padding: 15px;
+    }
+
+    .recipe-card h3 {
+        font-size: 21px;
+    }
+
+    form input,
+    form textarea {
+        padding: 8px;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    textarea#recipe-directions {
+        max-width: 100%;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .recipe-card {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .recipe-card h3 {
+        font-size: 19px;
+    }
+
+    form input,
+    form textarea {
+        padding: 7px;
+    }
+
+    form button {
+        padding: 12px 0;
+    }
+
+    textarea#recipe-directions {
+        max-width: 100%;
+        height: 150px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 70%;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .recipe-card {
+        padding: 25px;
+    }
+
+    .recipe-card h3 {
+        font-size: 24px;
+    }
+
+    textarea#recipe-directions {
+        max-width: 500px;
+        height: 250px;
+    }
+}
